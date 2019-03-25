@@ -9,15 +9,20 @@ public class Screen extends JPanel implements Runnable{
         public static int myWidth, myHeight;
         public static boolean isFirst = true;
         public static Room room;
+        
         public Screen(){
 		thread.start();
 	}
         public void define(){
             room = new Room(); 
             
-            for(int i=0;1<tileset_ground.length;i++){
-                tileset_ground[1] = new ImageIcon("res/tileset_ground.png").getImage();
-                tileset_ground[1] = createImage(new FilteredImageSource(tileset_ground[1].getSource(),new CropImageFilter(0,23*i,23,23)));
+            for(int i=0;i<tileset_ground.length;i++){
+                tileset_ground[i] = new ImageIcon("res/tileset_ground.png").getImage();
+                tileset_ground[i] = createImage(new FilteredImageSource(tileset_ground[i].getSource(),new CropImageFilter(0,23*i,23,23)));
+            }
+             for(int i=0;i<tileset_air.length;i++){
+                tileset_air[i] = new ImageIcon("res/tileset_air.png").getImage();
+                tileset_air[i] = createImage(new FilteredImageSource(tileset_air[i].getSource(),new CropImageFilter(0,23*i,23,23)));
             }
         }
         @Override

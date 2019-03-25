@@ -1,5 +1,6 @@
 import java.awt.*;
 
+
 public class Block extends Rectangle{
     public int groundID;
     public int airID;
@@ -10,7 +11,9 @@ public class Block extends Rectangle{
         this.airID= airID;
     }
     public void draw(Graphics g){
-        g.drawRect(x,y,width,height);
+        g.drawImage(Screen.tileset_ground[groundID],x,y,width,height,null);
+        
+        
         
          if(airID != Value.airAir){
             
