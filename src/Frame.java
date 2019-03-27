@@ -4,7 +4,7 @@ import javax.swing.*;
 public class Frame extends JFrame {
 	
 	public static String title = "Tower Defense";
-	public static Dimension size = new Dimension (700, 560);
+	public static Dimension size = new Dimension (750, 600);
 	
 
 	public Frame(){
@@ -20,7 +20,7 @@ public class Frame extends JFrame {
 	}
 	public void init(){
 		setLayout(new GridLayout(1,1,0,0));
-		Screen screen = new Screen();
+		Screen screen = new Screen(this);
 		add(screen);
 		setVisible(true);
 
